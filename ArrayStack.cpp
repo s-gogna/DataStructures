@@ -14,7 +14,7 @@ class ArrayStack
 {
    public:
       ArrayStack(int capacity = 10);
-      ArrayStack(const ArrayStack&);
+      ArrayStack(const ArrayStack& src);
       ~ArrayStack();
 
       bool push(const T& input)
