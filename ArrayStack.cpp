@@ -1,21 +1,21 @@
 /*!*****************************************************************************
-@file Stack.cpp
+@file ArrayStack.cpp
 
 Operation  |  Average  |  Worst
 -------------------------------------------------------------------------------
 Insertion  |  O(1)     |  O(1)
 Deletion   |  O(1)     |  O(1)
-Access     |  O(n)     |  O(n)
+Access     |  O(1)     |  O(1)
 Search     |  O(n)     |  O(n)
 *******************************************************************************/
 
 template <typename T>
-class Stack
+class ArrayStack
 {
    public:
-      Stack();
-      Stack(const Stack&);
-      ~Stack();
+      ArrayStack(int capacity = 10);
+      ArrayStack(const ArrayStack&);
+      ~ArrayStack();
 
       bool push(const T& input)
       {
@@ -33,16 +33,34 @@ class Stack
          // Return true
       }
 
-      bool empty()
+      bool get(int index, T& output)
       {
-         // Return if size is 0
+         // If the stack is empty, return false
+
+         // If the index is out of bounds, return false
+
+         // Output is assigned the element at array index
+         // Return true
       }
 
-      void clear()
+      bool search(T& input)
       {
-         // Existing elements can be ignored
-         // Set size to 0 to effectively "clear" the stack
+         // Loop through the array
+            // If element is equal to input
+            // Return true
+
+         // Return false
       }
+
+      const T& peek();
+
+      int capacity();
+
+      bool empty();
+
+      void clear();
+
+      bool resize(const int& newCapacity);
 
    private:
       int size;
