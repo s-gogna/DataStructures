@@ -8,6 +8,7 @@ Deletion   |  O(1)     |  O(1)
 Access     |  O(n)     |  O(n)
 Search     |  O(n)     |  O(n)
 *******************************************************************************/
+
 template <typename T>
 class DoubleLinkNode;
 
@@ -90,12 +91,11 @@ class DoublyLinkedList
 
          // Start at the front pointer
 
-         // Loop
-            // If value at current node equals input
-
+         // Loop until the pointer is NULL
+            // If the value of the node is equal to the input
                // Return true
 
-            // Update the current node by following the next-pointer
+            // Follow the "next" pointer
 
          // Return false
       }
@@ -106,7 +106,7 @@ class DoublyLinkedList
 
       void clear();
 
-      int getSize();
+      int size();
 
       bool gotoFront();
 
