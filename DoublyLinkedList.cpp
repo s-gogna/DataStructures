@@ -85,7 +85,7 @@ class DoublyLinkedList
          // Return true
       }
 
-      bool search(T& input)
+      bool find(T& input)
       {
          // If the list is empty, return false
 

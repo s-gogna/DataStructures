@@ -63,7 +63,7 @@ class SinglyLinkedQueue
          // Return true
       }
 
-      bool search(T& input)
+      bool find(T& input)
       {
          // If the queue is empty, return false
 

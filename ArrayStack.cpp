@@ -43,7 +43,7 @@ class ArrayStack
          // Return true
       }
 
-      bool search(T& input)
+      bool find(T& input)
       {
          // Loop through the array
             // If element is equal to input
