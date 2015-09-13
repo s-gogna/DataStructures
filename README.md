@@ -1,9 +1,15 @@
 # DataStructures
-DataStructures is a repository of pseudocode for common data structures.
+A repository of pseudocode for common data structures.
 
-## Contributers
+### Available / In-Progress
+- ArrayStack
+- SinglyLinkedQueue
+- DoublyLinkedList
+- BinarySearchTree
+
+### Contributers
 - Shubham Gogna
 - Ryan Yee
 
-## License
+### License
 This repository is under GNU GPLv3. Please refer to [LICENSE](https://github.com/s-gogna/DataStructures/blob/master/LICENSE).
