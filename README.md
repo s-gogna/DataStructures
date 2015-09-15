@@ -6,6 +6,7 @@ A repository of pseudocode for common data structures.
 - SinglyLinkedQueue
 - DoublyLinkedList
 - BinarySearchTree
+- HashTable
 
 ### Contributers
 - Shubham Gogna
