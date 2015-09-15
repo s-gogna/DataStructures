@@ -3,33 +3,85 @@
 
 Operation  |  Average  |  Worst
 -------------------------------------------------------------------------------
-Insertion  |           |
-Deletion   |           |
-Access     |           |
-Search     |           |
+Insertion  |  O(1)     |  O(n)
+Deletion   |  O(1)     |  O(n)
+Access     |  --       |  --
+Search     |  O(1)     |  O(n)
 *******************************************************************************/
 
 template <typename T>
 class HashTable
 {
    public:
-      HashTable(int size = 10);
+      HashTable(int maxSize, int (*hash)(const T&));
       HashTable(const HashTable& src);
       ~HashTable();
 
       bool insert(const T& input)
       {
-         // TODO
+         // Compute the hash of the input
+
+         // Use (hash % maxSize) to compute the index into the array
+
+         // If an object exists at the location
+            // If the object is equal to the input
+               // Return true
+
+            // Resolve the next "open" position from the collision location
+            // This specifics of this part depends on the type of collision resolution
+
+            // If the position is available
+               // Insert the object
+
+               // Return true
+
+            // Else
+               // Return false
+
+         // Else
+            // Insert the object
+
+            // Return true
       }
 
-      bool search(const T& key)
+      bool search(const T& input)
       {
-         // TODO
+         // Compute the hash of the input
+
+         // Use (hash % maxSize) to compute the index into the array
+
+         // If an object exists at the location
+            // If the object is equal to the input
+               // Return true
+
+            // Else there was a collision on insertion
+               // Loop through the possible locations after a collision
+                  // If the object is equal to the input
+                     // Return true
+
+         // Return false
       }
 
-      bool remove(const T& key)
+      bool remove(const T& input)
       {
-         // TODO
+         // Compute the hash of the input
+
+         // Use (hash % maxSize) to compute the index into the array
+
+         // If an object exists at the location
+            // If the object is equal to the input
+               // Remove from the array
+
+               // Return true
+
+            // Else there was a collision on insertion
+               // Loop through the possible locations after a collision
+                  // If the object is equal to the input
+                     // Remove from the array
+
+                     // Return true
+
+         // Return false
       }
 
       int size();
@@ -40,5 +92,7 @@ class HashTable
 
    private:
       int size;
+      int maxSize;
       T* table;
+      int (*hash)(const T&);
 };
