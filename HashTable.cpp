@@ -7,6 +7,11 @@ Insertion  |  O(1)     |  O(n)
 Deletion   |  O(1)     |  O(n)
 Access     |  --       |  --
 Search     |  O(1)     |  O(n)
+
+Collision resolution is very important in hash tables because a perfect hash
+function is difficult for all but the most trivial cases. It is assumed
+collisions will occur, so programmer(s) must make design choices for handling
+them.
 *******************************************************************************/
 
 template <typename T>
