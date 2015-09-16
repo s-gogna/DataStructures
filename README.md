@@ -5,6 +5,7 @@ A repository of pseudocode for common data structures.
 - ArrayStack
 - SinglyLinkedQueue
 - DoublyLinkedList
+- ArrayMinHeap
 - BinarySearchTree
 - HashTable
 
