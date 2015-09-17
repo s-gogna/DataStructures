@@ -34,7 +34,7 @@ class RedBlackTree
 
    private:
 
-      bool insertHelper(BinaryTreeNode*& node, const T& input)
+      bool insertHelper(BinaryTreeNode<T>*& node, const T& input)
       {
          // If node is null
             // Create a new node containing the input
@@ -56,12 +56,12 @@ class RedBlackTree
                // return false (failure)
       }
 
-      bool removeHelper(BinaryTreeNode*& node, const T& key)
+      bool removeHelper(BinaryTreeNode<T>*& node, const T& key)
       {
          // TODO
       }
 
-      bool findHelper(BinaryTreeNode*& node, const T& key)
+      bool findHelper(BinaryTreeNode<T>*& node, const T& key)
       {
          // If node is null
             // Return false (not found)
@@ -77,12 +77,46 @@ class RedBlackTree
                // return true (found)
       }
 
-      void recolor(BinaryTreeNode*& node)
+      void verifyColor(BinaryTreeNode<T>*& node)
       {
-         // TODO
+         // If parent of node is NULL (node is root)
+            // Color the node black
+
+         // Else if parent of node is black
+            // Do nothing (black-height constraint not broken)
+
+         // Else if parent is red and uncle (other child of grandparent) is red
+            // Recolor parent and uncle to black
+
+            // Recolor grandparent to red
+
+            // verifyColor(grandparent)
+
+         // Else if parent is red and uncle is black
+            // If node is a right child and parent is a left child
+               // rotateLeft(parent)
+
+               // Node points to node's old parent
+               // The remainder of the code will validate colors from that node
+
+            // Else if node is a left child and parent is a right child
+               // rotateRight(parent)
+
+               // Node points to node's old parent
+               // The remainder of the code will validate colors from that node
+
+            // Parent is colored black
+
+            // Grandparent is colored red
+
+            // If parent is a right child
+               // rotateLeft(parent)
+
+            // Else
+               // rotateRight(parent)
       }
 
-      int rotateLeft(BinaryTreeNode*& node)
+      int rotateLeft(BinaryTreeNode<T>*& node)
       {
          // Left tree is the initial
          // Right tree is after the rotateLeft(A)
@@ -100,7 +134,7 @@ class RedBlackTree
          // Node becomes left-child of the original right-child
       }
 
-      int rotateRight(BinaryTreeNode*& node)
+      int rotateRight(BinaryTreeNode<T>*& node)
       {
          // Left tree is the initial
          // Right tree is after the rotateRight(A)
