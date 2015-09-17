@@ -49,7 +49,7 @@ class HashTable
             // Return true
       }
 
-      bool search(const T& input)
+      bool find(const T& input)
       {
          // Compute the hash of the input
 

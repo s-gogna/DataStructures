@@ -55,7 +55,7 @@ class ArrayMinHeap
          // Return true
       }
 
-      bool search(const T& input);
+      bool find(const T& input);
 
       bool replace(const T& input);
 
@@ -66,7 +66,7 @@ class ArrayMinHeap
       void clear();
 
    private:
-      void searchHelper(int index, const T& input)
+      void findHelper(int index, const T& input)
       {
          // If index is out of bounds, return false
 
@@ -75,8 +75,8 @@ class ArrayMinHeap
          // If element at index is input, return true
 
          // Else
-            // Return searchHelper(2 * index + 1, input) || 
-            // searchHelper(2 * index + 2, input)
+            // Return findHelper(2 * index + 1, input) ||
+            // findHelper(2 * index + 2, input)
       }
 
       int size;

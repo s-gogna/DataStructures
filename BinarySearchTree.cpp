@@ -25,9 +25,9 @@ class BinarySearchTree
 
       bool insert(const T& input);
 
-      bool search(const T& key);
-
       bool remove(const T& key);
+
+      bool find(const T& key);
 
       int size();
 
