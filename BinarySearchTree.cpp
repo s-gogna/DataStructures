@@ -37,7 +37,7 @@ class BinarySearchTree
 
    private:
 
-      bool insertHelper(BinaryTreeNode*& node, const T& input)
+      bool insertHelper(BinaryTreeNode<T>*& node, const T& input)
       {
          // If node is null
             // Create a new node containing the input
@@ -57,23 +57,7 @@ class BinarySearchTree
                // return false (failure)
       }
 
-      bool findHelper(BinaryTreeNode*& node, const T& key)
-      {
-         // If node is null
-            // Return false (not found)
-
-         // Else
-            // If the key is "lesser" than the value of node
-               // return findHelper(node -> left, key)
-
-            // Else if the key is "greater" than the value of the node
-               // return findHelper(node -> right, key)
-
-            // Else
-               // return true (found)
-      }
-
-      bool removeHelper(BinaryTreeNode*& node, const T& key)
+      bool removeHelper(BinaryTreeNode<T>*& node, const T& key)
       {
          // If node is null
             // Return false (not found)
@@ -108,6 +92,22 @@ class BinarySearchTree
                   // Remove the LP
 
                // Return true
+      }
+
+      bool findHelper(BinaryTreeNode<T>*& node, const T& key)
+      {
+         // If node is null
+            // Return false (not found)
+
+         // Else
+            // If the key is "lesser" than the value of node
+               // return findHelper(node -> left, key)
+
+            // Else if the key is "greater" than the value of the node
+               // return findHelper(node -> right, key)
+
+            // Else
+               // return true (found)
       }
 
       int size;
