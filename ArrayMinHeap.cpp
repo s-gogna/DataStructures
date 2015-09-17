@@ -66,6 +66,7 @@ class ArrayMinHeap
       void clear();
 
    private:
+
       void findHelper(int index, const T& input)
       {
          // If index is out of bounds, return false
