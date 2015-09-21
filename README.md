@@ -8,6 +8,7 @@ A repository of pseudocode for common data structures.
 - ArrayMinHeap
 - BinarySearchTree
 - HashTable
+- RedBlackTree
 
 ### Contributers
 - Shubham Gogna
