@@ -9,6 +9,7 @@ A repository of pseudocode for common data structures.
 - BinarySearchTree
 - HashTable
 - RedBlackTree
+- AdjacencyMatrixGraph
 
 ### Contributers
 - Shubham Gogna
