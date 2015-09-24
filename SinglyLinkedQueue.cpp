@@ -48,7 +48,7 @@ class SinglyLinkedQueue
          // Return true
       }
 
-      bool get(int index, T& output)
+      bool get(size_t index, T& output)
       {
          // If the queue is empty, return false
 
@@ -84,14 +84,14 @@ class SinglyLinkedQueue
 
       const T& back();
 
-      int size();
+      size_t size();
 
       bool empty();
 
       void clear();
 
    private:
-      int size;
+      size_t size;
       SingleLinkNode<T>* front;
       SingleLinkNode<T>* back;
 };

@@ -69,7 +69,7 @@ class DoublyLinkedList
          // Return true
       }
 
-      bool get(int index, T& output)
+      bool get(size_t index, T& output)
       {
          // If the list is empty, return false
 
@@ -106,7 +106,7 @@ class DoublyLinkedList
 
       void clear();
 
-      int size();
+      size_t size();
 
       bool gotoFront();
 
@@ -117,7 +117,7 @@ class DoublyLinkedList
       bool gotoPrev();
 
    private:
-      int size;
+      size_t size;
       DoubleLinkNode<T>* cursor;
       DoubleLinkNode<T>* front;
       DoubleLinkNode<T>* back;

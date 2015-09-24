@@ -18,7 +18,7 @@ template <typename T>
 class HashTable
 {
    public:
-      HashTable(int maxSize, int (*hash)(const T&));
+      HashTable(size_t maxSize, int (*hash)(const T&));
       HashTable(const HashTable& src);
       ~HashTable();
 
@@ -89,15 +89,15 @@ class HashTable
          // Return false
       }
 
-      int size();
+      size_t size();
 
       bool empty();
 
       void clear();
 
    private:
-      int size;
-      int maxSize;
+      size_t size;
+      size_t maxSize;
       T* table;
       int (*hash)(const T&);
 };

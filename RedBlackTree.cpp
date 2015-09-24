@@ -26,7 +26,7 @@ class RedBlackTree
 
       bool find(const T& key);
 
-      int size();
+      size_t size();
 
       bool empty();
 
@@ -279,7 +279,7 @@ class RedBlackTree
          // Copy pointers of src into dest
       }
 
-      int size;
+      size_t size;
       BinaryTreeNode<T>* root;
 };
 
