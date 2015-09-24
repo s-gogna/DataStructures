@@ -30,7 +30,7 @@ template <typename T>
 class AdjacencyMatrixGraph
 {
    public:
-      AdjacencyMatrixGraph(int maxSize = 10);
+      AdjacencyMatrixGraph(size_t maxSize = 10);
       AdjacencyMatrixGraph(const AdjacencyMatrixGraph& src);
       ~AdjacencyMatrixGraph();
 
@@ -97,15 +97,15 @@ class AdjacencyMatrixGraph
 
       int getOutDegree(const int& vertex);
 
-      int size();
+      size_t size();
 
       void clear();
 
    private:
       int indexOf(const T& vertex);
 
-      int size;
-      int maxSize;
+      size_t size;
+      size_t maxSize;
       bool** matrix;
       T* vertexList;
 };

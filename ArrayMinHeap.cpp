@@ -13,7 +13,7 @@ template <typename T>
 class ArrayMinHeap
 {
    public:
-      ArrayMinHeap(int maxSize = 16);
+      ArrayMinHeap(size_t maxSize = 16);
       ArrayMinHeap(const ArrayMinHeap& src);
       ~ArrayMinHeap();
 
@@ -59,7 +59,7 @@ class ArrayMinHeap
 
       bool replace(const T& input);
 
-      int size();
+      size_t size();
 
       bool empty();
 
@@ -67,7 +67,7 @@ class ArrayMinHeap
 
    private:
 
-      void findHelper(int index, const T& input)
+      void findHelper(size_t index, const T& input)
       {
          // If index is out of bounds, return false
 
@@ -80,7 +80,7 @@ class ArrayMinHeap
             // findHelper(2 * index + 2, input)
       }
 
-      int size;
-      int maxSize;
+      size_t size;
+      size_t maxSize;
       T* table;
 };

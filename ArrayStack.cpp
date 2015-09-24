@@ -13,7 +13,7 @@ template <typename T>
 class ArrayStack
 {
    public:
-      ArrayStack(int capacity = 10);
+      ArrayStack(size_t capacity = 10);
       ArrayStack(const ArrayStack& src);
       ~ArrayStack();
 
@@ -33,7 +33,7 @@ class ArrayStack
          // Return true
       }
 
-      bool get(int index, T& output)
+      bool get(size_t index, T& output)
       {
          // If the stack is empty, return false
 
@@ -54,16 +54,16 @@ class ArrayStack
 
       const T& peek();
 
-      int capacity();
+      size_t capacity();
 
       bool empty();
 
       void clear();
 
-      bool resize(const int& newCapacity);
+      bool resize(const size_t& newCapacity);
 
    private:
-      int size;
-      int maxSize;
+      size_t size;
+      size_t maxSize;
       T* data;
 };

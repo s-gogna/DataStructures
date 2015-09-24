@@ -29,7 +29,7 @@ class BinarySearchTree
 
       bool find(const T& key);
 
-      int size();
+      size_t size();
 
       bool empty();
 
@@ -110,7 +110,7 @@ class BinarySearchTree
                // return true (found)
       }
 
-      int size;
+      size_t size;
       BinaryTreeNode<T>* root;
 };
 
